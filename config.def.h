@@ -20,7 +20,7 @@ static unsigned int lineheight = 0;         /* -h option; minimum height of a me
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Inter-Regular:size=12", 
+	"Ubuntu Light:size=12", 
 	"Fira Code Nerd Font:size=14", 
 	"JoyPixels:pixelsize=20:antialias=true:autohint=true",
 };
@@ -31,15 +31,15 @@ static const char *leftcmd      = NULL;      /* -p  option; prompt to the left o
 static const char *rightcmd      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][9] = {
 	/*     fg         bg     darker      */
-	[SchemeNorm] = { "#DFDFDF", "#121212", "#3E485B" },
-	[SchemeFade] = { "#575E70", "#121212", "#3E485B" },
-	[SchemeHighlight] = { "#DFDFDF", "#384252", "#272727" },
-	[SchemeHover] = { "#DFDFDF", "#272727", "#2E2E2E" },
-	[SchemeSel] = { "#000000", "#8AB4F8", "#536DFE" },
-	[SchemeOut] = { "#000000", "#3579CA", "#3579CA" },
-	[SchemeGreen] = { "#000000", "#81c995", "#1e8e3e" },
-	[SchemeRed] = { "#000000", "#f28b82", "#d93025" },
-	[SchemeYellow] = { "#000000", "#fdd663", "#f9ab00" },
+	[SchemeNorm] = { "#B7BCD4", "#161923", "#2C334D" },
+	[SchemeFade] = { "#7F8CB8", "#161923", "#2C334D" },
+	[SchemeHighlight] = { "#B7BCD4", "#2C334D", "#1F2437" },
+	[SchemeHover] = { "#B7BCD4", "#2C334D", "#1F2437" },
+	[SchemeSel] = { "#000000", "#F1739A", "#D84572" },
+	[SchemeOut] = { "#000000", "#D84572", "#D84572" },
+	[SchemeGreen] = { "#000000", "#B882C2", "#995FA4" },
+	[SchemeRed] = { "#000000", "#FF7965", "#E84C34" },
+	[SchemeYellow] = { "#000000", "#8A8BBE", "#67689F" },
 };
 
 /* -l option; if nonzero, instantmenu uses vertical list with given number of lines */
