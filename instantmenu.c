@@ -729,12 +729,12 @@ void animatesel() {
 	time  = 0;
 	drw_setscheme(drw, scheme[SchemeSel]);
 
-        XRRScreenConfiguration *conf = XRRGetScreenInfo(dpy, RootWindow(dpy, 0));
-        short refresh_rate = XRRConfigCurrentRate(conf);
+	XRRScreenConfiguration *conf = XRRGetScreenInfo(dpy, RootWindow(dpy, 0));
+	short refresh_rate = XRRConfigCurrentRate(conf);
         
-        // scale the framerate properly for !=60Hz displays
-        framecount = framecount * (refresh_rate / 60);
-        double usecs = (1 / (double)refresh_rate) * 1000000;
+	// scale the framerate properly for !=60Hz displays
+	framecount = framecount * (refresh_rate / 60);
+	double usecs = (1 / (double)refresh_rate) * 1000000;
 
 	while (time < framecount)
 	{
@@ -765,12 +765,12 @@ void animaterect(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2)
 	double timefactor = 0;
 	drw_setscheme(drw, scheme[SchemeSel]);
 
-        XRRScreenConfiguration *conf = XRRGetScreenInfo(dpy, RootWindow(dpy, 0));
-        short refresh_rate = XRRConfigCurrentRate(conf);
+	XRRScreenConfiguration *conf = XRRGetScreenInfo(dpy, RootWindow(dpy, 0));
+	short refresh_rate = XRRConfigCurrentRate(conf);
         
-        // scale the framerate properly for !=60Hz displays
-        framecount = framecount * (refresh_rate / 60);
-        double usecs = (1 / (double)refresh_rate) * 1000000;
+	// scale the framerate properly for !=60Hz displays
+	framecount = framecount * (refresh_rate / 60);
+	double usecs = (1 / (double)refresh_rate) * 1000000;
 
 	while (time < framecount)
 	{
@@ -778,7 +778,7 @@ void animaterect(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2)
 		drw_rect(drw, x1 + (x2 - x1) * timefactor, y1 + (y2 - y1) * timefactor, w1 + (w2 - w1) * timefactor, h1 + (h2 - h1) * timefactor, 1, 1, 0);
 		drw_map(drw, win, 0, 0, mw, mh);
 		time++;
-		usleep(19000);
+		usleep(usecs);
 	}
 }
 
